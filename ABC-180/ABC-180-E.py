@@ -5,7 +5,7 @@ now=list(map(int,input().split()))
 elcity=[list(map(int,input().split())) for _ in range(n-1)]
 l=[i for i in range(n-1)]
 per=permutations(l,n-1)
-print(per)
+
 cost=0
 for i in range(n-1):
     num=0
