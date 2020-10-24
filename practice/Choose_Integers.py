@@ -1,12 +1,7 @@
 a,b,c=map(int,input().split())
-Flag=False
-for i in range(101):
-    num=(i*b+c)/a
-    
-    if num.is_integer():
-        Flag=True
+ans='NO'
+for i in range(a,a*b+1,a):
+    if i%b==c:
+        ans='YES'
         break
-if Flag:
-    print('Yes')
-else:
-    print('No')
+print(ans)
