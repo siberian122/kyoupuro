@@ -12,9 +12,9 @@ for i in range(n):
     cnt=0
     num=[]
     
-    for l in range(n+1):
-        for k in range(len(L[l])):
-            if i==L[l][k]:
+    for k in range(len(L[i])):
+        for l in range(k):
+            if i==L[k][l]:
                 num.append(k)
 
     for s in num:
