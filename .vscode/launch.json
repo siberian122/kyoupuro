@@ -7,11 +7,23 @@
             "label": "sample",
             "type": "shell",
             "command": "g++",
-            "args": ["-g", "sample.cpp"],
+            "args": [
+                "-g",
+                "sample.cpp"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
+        }
+    ],
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
         }
     ]
 }

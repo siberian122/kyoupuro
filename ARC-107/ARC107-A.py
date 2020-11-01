@@ -1,9 +1,7 @@
-a,b,c=map(int,input().split())
-ans=0
+a=list(map(int,input().split()))
+ans=1
 mod=998244353
 
-for i in range(2,a+1):
-    for j in range(2,b+1):
-        for k in range(2,c+1):
-            ans+=i*j*k
+for i in a:
+    ans+=i*(i+1)//2
 print(ans%mod)
