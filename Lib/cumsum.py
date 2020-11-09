@@ -1,0 +1,1 @@
+res = [sum(mydata[:i+1]) for i in range(len(mydata))]
