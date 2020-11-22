@@ -1,16 +1,17 @@
-import itertools
+from collections import Counter
 n=input()
 ans='No'
-l=[i for i in n]
-l=list(itertools.permutations(l,3))
-#print(l)
-for i in l:
-    num=''.join(i)
-    
-    if int(num)%2==0:
-        s=int(num)//2
-        s=str(s)
-        s=s[1:]
-        if int(s)%4==0:
-            ans='Yes'
-print(ans)
+if len(n)<=2:
+    print(n[::-1])
+    if int(n)%8==0 or int(n[::-1])%8==0:
+        ans='Yes'
+    else:
+        ans='No'
+
+else:
+    cnt=Counter(n)
+    for i in range(104,1000,8):
+        if not Counter(str(i)) -cnt:
+            ans='Yes'     
+            break
+print(ans) 
