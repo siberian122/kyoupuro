@@ -2,7 +2,6 @@ from collections import Counter
 n=input()
 ans='No'
 if len(n)<=2:
-    print(n[::-1])
     if int(n)%8==0 or int(n[::-1])%8==0:
         ans='Yes'
     else:
