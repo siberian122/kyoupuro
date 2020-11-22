@@ -18,7 +18,6 @@ def factoricl(n):
     return factor
 
 l=factoricl(n)
-print(l)
 l=Counter(l)
 ans=0
 for i in l.values():
