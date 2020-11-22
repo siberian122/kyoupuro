@@ -1,7 +1,6 @@
 def isAvailable(y,x):
     if not (0 <= y < R):
 		return False
-
 	if not (0 <= x < C):
 		return False
 	if dist[y][x] != -1:
