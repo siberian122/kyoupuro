@@ -1,11 +1,13 @@
 import numpy as np
 n,w=map(int,input().split())
-use=[[0 for i in range(10**9)] for i in range(n)]
-for i in range(n):
-    s,t,p=map(int,input().split())
-    use[n][s:t]=p
-L=use.sum(axis=0)
-if np.where(use<w):
-    print('Yes')
+P=[0 for _ in range(2*10**5+1)]
+for _ in range(n):
+  s,t,p=map(int,input().split())
+  P[s]+=p
+  P[t]-=p
+P=np.cumsum(P)
+#print(P[:10])
+if all([i <=w for i in P]):
+  print('Yes')
 else:
-    print('NO')
+  print('No')
