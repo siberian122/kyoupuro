@@ -1,3 +1,11 @@
+import sys
+input = sys.stdin.readline
+
+n, m = map(int, input().split())
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+
+
 class UnionFind:
     def __init__(self, n):
         self.par = [-1] * (n + 1)
@@ -43,3 +51,31 @@ class UnionFind:
             if i < 0:
                 count = count + 1
         return count
+
+
+U = UnionFind(n)
+for i in range(m):
+    c, d = map(int, input().split())
+    c -= 1
+    d -= 1
+    U.union(c, d)
+print(*U)
+check = {}
+for i in range(n):
+    x = U.find(i)
+    if x in check:
+        check[x].append(i)
+    else:
+        check[x] = [i]
+
+for i in check:
+    l = check[i]
+    A = 0
+    B = 0
+    for j in l:
+        A += a[j]
+        B += b[j]
+    if A != B:
+        print('No')
+        sys.exit()
+print('Yes')

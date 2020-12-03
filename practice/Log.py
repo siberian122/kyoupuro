@@ -9,4 +9,3 @@ while low < high:
         low = mid+1
 ans = n+1-(high-1)
 print(ans)
-4
