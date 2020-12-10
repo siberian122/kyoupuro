@@ -1,30 +1,11 @@
 a, b, x, y = map(int, input().split())
-ans = 0
-if a == b:
-    if x < y:
-        ans = x
-    else:
-        ans = y
-elif a < b:
-    if 2*x <= y:
-        cnt = 2 * x
-    else:
-        cnt = y
-    for i in range(b-a):
-        ans += cnt
-    ans += x
-elif a-1 == b:
-    if x < y:
-        cnt = x
-    else:
-        cnt = y
-    ans = cnt
+if b > a:
+    use_x = x+2*x*(b-a)
+    use_y = x+y*(b-a)
+elif a == b:
+    use_x = x
+    use_y = x+y
 else:
-    if 2*x < y:
-        cnt = 2*x
-    else:
-        cnt = y
-    for i in range(a-b):
-        ans += cnt
-    ans += x
-print(ans)
+    use_x = x+2*x*(a-b-1)
+    use_y = x+y*(a-b-1)
+print(min(use_x, use_y))
