@@ -8,7 +8,7 @@ for a, b in ab:
     if m >= b:
         ans += a*b
         m -= b
-        print(m)
+        # print(m)
     else:
         ans += a*m
         break
