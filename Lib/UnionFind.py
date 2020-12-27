@@ -43,3 +43,10 @@ class UnionFind:
             if i < 0:
                 count = count + 1
         return count
+
+
+"""
+使い方メモ
+tree = UnionFind(n)
+tree.union で　木を作る
+"""
