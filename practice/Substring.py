@@ -2,7 +2,7 @@ s = input()
 t = input()
 ans = 10000
 n = len(t)
-for i in range(len(s)-n):
+for i in range(len(s)-n+1):
     cnt = 0
     for l in range(n):
         if s[i+l] != t[l]:
