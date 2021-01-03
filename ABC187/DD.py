@@ -6,7 +6,7 @@ for i in range(n):
     a, t = map(int, input().split())
     aoki += a
 
-    cnt = [a, t, a-t]
+    cnt = [a, t, a+a+t]
     l.append(cnt)
 l = sorted(l, reverse=True, key=lambda x:  x[2])
 for i in range(n):
