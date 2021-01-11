@@ -13,7 +13,7 @@ for i in range(n):
                 ans += 1
             else:  # 単調増加し続ける
                 up = 1
-        else:  # 前より小さい時
+        elif a[i] < b:  # 前より小さい時
             if up:
                 up, down = 0, 0
                 ans += 1
