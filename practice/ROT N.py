@@ -1,7 +1,6 @@
 n = int(input())
 s = input()
 alph = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-print(len(alph))
 ans = ""
 for i in s:
     num = alph.index(i)
