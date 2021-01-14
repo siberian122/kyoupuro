@@ -1,23 +1,17 @@
 h, w, k = map(int, input().split())
-hw = []
-for _ in range(h):
-    hw.append(list(input()))
-
+c = [list(input()) for _ in range(h)]
 ans = 0
 for i in range(2**h):
     for j in range(2**w):
-
         cnt = 0
-        for n in range(h):
-            if (i >> n) & 1:
+        for x in range(h):
 
-                for m in range(w):
-                    if (j >> m) & 1:
-                        if hw[n][m] == '#':
+            if (i >> x) & 1:
+                for l in range(w):
+                    if (j >> l) & 1:
+
+                        if c[x][l] == "#":
                             cnt += 1
-
         if cnt == k:
             ans += 1
-
-print(hw)
 print(ans)
