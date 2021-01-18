@@ -17,10 +17,6 @@ while d:
         if l[i] == -1:
             d.append(i)
             l[i] = p
-print(d)
-print(l)
-print("Yes")
-
 a = l[2:]
 for i in range(len(a)):
     print(a[i])
