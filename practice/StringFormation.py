@@ -1,22 +1,19 @@
 s = input()
-cnt = True
+cnt = 0
+front = ""
+end = ""
 for _ in range(int(input())):
     q = list(input().split())
 
     if q[0] == "1":
-        cnt = not bool(cnt)
+        cnt = cnt ^ 1
     else:
-        if q[1] == "1":
-            if cnt:
-                s = q[-1]+s
-            else:
-                s += q[-1]
+        if int(q[1])-1 == cnt:
+            front = q[2]+front
         else:
-            if cnt:
-                s += q[-1]
-            else:
-                s = q[-1]+s
+            end = end+q[2]
+s = front + s + end
 if cnt:
-    print(s)
-else:
     print(s[::-1])
+else:
+    print(s)
