@@ -1,9 +1,8 @@
 n, x = map(int, input().split())
+cnt = 0
 for i in range(n):
     v, p = map(int, input().split())
-
-    x -= float(v*p*0.01)
-    print(x)
-    if x < 0:
+    cnt = v*p
+    if cnt > x*100:
         exit(print(i+1))
 print(-1)
