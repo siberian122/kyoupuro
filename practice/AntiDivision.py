@@ -13,3 +13,4 @@ def count(n, c, d):
 cntA = count(a-1, c, d)
 cntB = count(b, c, d)
 print(cntB-cntA)
+print(cntA)
