@@ -1,15 +1,8 @@
 s = input()
-mincnt = 101
-for i in range(26):
-    c = chr(ord("a") + i)
+ans = 100
+for i in set(s):
     cnt = 0
-    maxcnt = 0
-    for j in range(len(s)):
-        if s[j] == c:
-            maxcnt = max(maxcnt, cnt)
-            cnt = 0
-        else:
-            l = cnt
-        maxcnt = max(maxcnt, l)
-        mincnt = min(mincnt, maxcnt)
-print(mincnt)
+    for j in s.split(i):
+        cnt = max(cnt, len(j))
+    ans = min(cnt, ans)
+print(ans)
