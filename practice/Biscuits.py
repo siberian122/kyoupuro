@@ -7,7 +7,7 @@ for i in a:
     else:
         even += 1
 if odd == 0:
-    if P == 1:
+    if p == 1:
         print(0)
     else:
         print(2**n)
