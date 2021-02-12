@@ -1,9 +1,7 @@
 n = int(input())
-ans = 2
-for _ in range(n):
+ans = 1
+for i in range(n):
     s = input()
-    if s == "AND":
-        ans += 2
-    else:
-        ans *= 2
-print(ans-1)
+    if s == "OR":
+        ans += 2**(i+1)
+print(ans)
