@@ -4,4 +4,5 @@ for _ in range(t):
     num = r-l*2
     if num < 0:
         print(0)
-    print((num+1)*(num+2)//2)
+    else:
+        print((num+1)*(num+2)//2)
