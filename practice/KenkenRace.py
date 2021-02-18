@@ -7,7 +7,7 @@ else:
     if c < d:
         print("Yes")
     else:
-        if s[b-2:d+1].find("...") > 0:
-            print("Yes")
-        else:
+        if s[b-2:d+1].find("...")==-1:
             print("No")
+        else:
+            print("Yes")
