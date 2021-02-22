@@ -10,7 +10,7 @@ def g2(num):
     return "".join(num)
 
 
-for i in range(int(k)):
+for _ in range(int(k)):
     a = int(g1(str(n)))-int(g2(str(n)))
     n = a
     if n <= 0:
