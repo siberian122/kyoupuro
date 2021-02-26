@@ -12,4 +12,4 @@ for _ in range(n):
     elif a == 4:
         h = min(h, y)
 # print(h, tate, w, yoko)
-print(max(w-yoko, 0)*max(y-tate, 0))
+print(max(w-yoko, 0)*max(h-tate, 0))
