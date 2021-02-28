@@ -26,4 +26,4 @@ while True:
         now = C[c]
         c += 1
 
-    print(a, b, c, now)
+    #print(a, b, c, now)
