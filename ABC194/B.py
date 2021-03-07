@@ -15,10 +15,12 @@ print(cnt_a)
 print(cnt_b)
 print(cnt_a[0][2])
 """
-if cnt_a[0][2] == cnt_b[0][2]:
-    if cnt_a[0][0] != cnt_b[0][1]:
-        cnt = wa
-    else:
+if cnt_a[0][2] == cnt_b[0][2]:  # 同じ人が速い
+    if cnt_a[0][0] > cnt_b[0][1]:  # Aのほうが遅い
+        cnt = a
+    elif cnt_a[0][0] < cnt_b[0][1]:
+        cnt = b
+    else:  # 一緒だったら次のAとBの小さいほう
         cnt = min(a, b)
     print(min(wa, cnt))
 
