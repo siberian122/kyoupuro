@@ -1,7 +1,7 @@
-s, t = input().split()
-a, b = map(int, input().split())
-u = input()
-if s == u:
-    print(a-1, b)
-else:
-    print(a, b-1)
+n = int(input())
+ans = 0
+cnt = 1
+while cnt < n:
+    ans += n/(n-cnt)
+    cnt += 1
+print(ans)
