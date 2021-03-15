@@ -6,10 +6,9 @@ x = list(map(int, input().split()))
 for _ in range(q):
     ans = 0
     l, r = map(int, input().split())
-    print(x[:l-1]+x[r:])
     box = sorted(x[:l-1]+x[r:])
     ined = []
-    print(box)
+
     for j in box:
         for i in range(n):
             if j >= nimotu[i][0] and i not in ined:
