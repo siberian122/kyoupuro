@@ -3,6 +3,7 @@ a = []
 t = []
 mae = 0
 cnt = 0
+chk = False
 for _ in range(n):
     A, T = map(int, input().split())
     if mae == T:
@@ -20,13 +21,12 @@ for _ in range(n):
 q = int(input())
 x = list(map(int, input().split()))
 
-for i in range(q):
-    num = x[i]
+for i in x:
     for j in range(cnt):
         if t[j] == 1:
-            num += a[j]
+            i += a[j]
         elif t[j] == 2:
-            num = max(num, a[j])
+            i = max(i, a[j])
         else:
-            num = min(num, a[j])
-    print(num)
+            i = min(i, a[j])
+    print(i)
