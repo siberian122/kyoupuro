@@ -3,4 +3,4 @@ s = input()
 if a < 3200:
     print("red")
 else:
-    prnit(s)
+    print(s)
