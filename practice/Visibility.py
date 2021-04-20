@@ -3,7 +3,7 @@ s = [input() for _ in range(h)]
 ans = 0
 x -= 1
 y -= 1
-for i in range(x, w):
+for i in range(x, h):
     if s[i][y] == ".":
         ans += 1
     else:
